@@ -1,0 +1,32 @@
+(function (React, ReactDOM) {
+  'use strict';
+
+  React = React && Object.prototype.hasOwnProperty.call(React, 'default') ? React['default'] : React;
+  ReactDOM = ReactDOM && Object.prototype.hasOwnProperty.call(ReactDOM, 'default') ? ReactDOM['default'] : ReactDOM;
+
+  const width = 960;
+  const height = 500;
+  const centerX = width/2;
+  const centerY = height/2;
+  const strokeWidth = 20;
+  const eyeOffsetX = 90;
+  const eyeOffsetY = 100;
+  const eyeradius = 40;
+
+
+  const App = () => (
+    React.createElement( 'svg', { width: width, height: height },
+        React.createElement( 'circle', { cx: centerX, cy: centerY, r: centerY - strokeWidth/2, fill: "yellow", stroke: "black", 'stroke-width': strokeWidth }),
+      	React.createElement( 'circle', { cx: centerX - eyeOffsetX, cy: centerY - eyeOffsetY, r: eyeradius }),
+      React.createElement( 'circle', { cx: centerX + eyeOffsetX, cy: centerY - eyeOffsetY, r: eyeradius })
+      
+        )
+    );
+
+
+  const rootElement = document.getElementById('root');
+  ReactDOM.render(React.createElement( App, null ), rootElement);
+
+}(React, ReactDOM));
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcblxuY29uc3Qgd2lkdGggPSA5NjA7XG5jb25zdCBoZWlnaHQgPSA1MDA7XG5jb25zdCBjZW50ZXJYID0gd2lkdGgvMjtcbmNvbnN0IGNlbnRlclkgPSBoZWlnaHQvMjtcbmNvbnN0IHN0cm9rZVdpZHRoID0gMjA7XG5jb25zdCBleWVPZmZzZXRYID0gOTA7XG5jb25zdCBleWVPZmZzZXRZID0gMTAwO1xuY29uc3QgZXllcmFkaXVzID0gNDA7XG5cblxuY29uc3QgQXBwID0gKCkgPT4gKFxuICA8c3ZnIHdpZHRoID17d2lkdGh9IGhlaWdodCA9IHtoZWlnaHR9PlxuICAgICAgPGNpcmNsZSBjeCA9IHtjZW50ZXJYfVxuICAgICAgICAgICAgICBjeSA9IHtjZW50ZXJZfSBcbiAgICAgICAgICAgICAgciA9IHtjZW50ZXJZIC0gc3Ryb2tlV2lkdGgvMn1cbiAgICAgICAgICAgICAgZmlsbCA9IFwieWVsbG93XCJcbiAgICAgICAgICAgICAgc3Ryb2tlID0gXCJibGFja1wiXG4gICAgICAgICAgICAgIHN0cm9rZS13aWR0aCA9IHtzdHJva2VXaWR0aH0gLz5cbiAgICBcdDxjaXJjbGUgY3ggPSB7Y2VudGVyWCAtIGV5ZU9mZnNldFggfVxuICAgICAgICAgICAgICBjeSA9IHtjZW50ZXJZIC0gZXllT2Zmc2V0WX0gXG4gICAgICAgICAgICAgIHIgPSB7ZXllcmFkaXVzfVxuICAgICAgICAgICAgICAvPlxuICAgIDxjaXJjbGUgY3ggPSB7Y2VudGVyWCArIGV5ZU9mZnNldFggfVxuICAgICAgICAgICAgICBjeSA9IHtjZW50ZXJZIC0gZXllT2Zmc2V0WX0gXG4gICAgICAgICAgICAgIHIgPSB7ZXllcmFkaXVzfVxuICAgICAgICAgICAgICAvPlxuICAgIFxuICAgICAgPC9zdmc+XG4gICk7XG5cblxuY29uc3Qgcm9vdEVsZW1lbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncm9vdCcpXG5SZWFjdERPTS5yZW5kZXIoPEFwcCAvPiwgcm9vdEVsZW1lbnQpOyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7RUFHQSxNQUFNLEtBQUssR0FBRyxHQUFHLENBQUM7RUFDbEIsTUFBTSxNQUFNLEdBQUcsR0FBRyxDQUFDO0VBQ25CLE1BQU0sT0FBTyxHQUFHLEtBQUssQ0FBQyxDQUFDLENBQUM7RUFDeEIsTUFBTSxPQUFPLEdBQUcsTUFBTSxDQUFDLENBQUMsQ0FBQztFQUN6QixNQUFNLFdBQVcsR0FBRyxFQUFFLENBQUM7RUFDdkIsTUFBTSxVQUFVLEdBQUcsRUFBRSxDQUFDO0VBQ3RCLE1BQU0sVUFBVSxHQUFHLEdBQUcsQ0FBQztFQUN2QixNQUFNLFNBQVMsR0FBRyxFQUFFLENBQUM7QUFDckI7QUFDQTtFQUNBLE1BQU0sR0FBRyxHQUFHO0VBQ1osRUFBRSw4QkFBSyxPQUFRLEtBQU0sRUFBQyxRQUFVO0VBQ2hDLE1BQU0saUNBQVEsSUFBTSxPQUFRLEVBQ2QsSUFBTSxPQUFRLEVBQ2QsR0FBSyxPQUFPLEdBQUcsV0FBVyxDQUFDLENBQUUsRUFDN0IsTUFBTyxRQUFRLEVBQ2YsUUFBUyxPQUFPLEVBQ2hCLGdCQUFnQixhQUFZO0VBQzFDLEtBQUssaUNBQVEsSUFBTSxPQUFPLEdBQUcsVUFBWSxFQUMzQixJQUFNLE9BQU8sR0FBRyxVQUFXLEVBQzNCLEdBQUssV0FBVTtFQUU3QixJQUFJLGlDQUFRLElBQU0sT0FBTyxHQUFHLFVBQVksRUFDMUIsSUFBTSxPQUFPLEdBQUcsVUFBVyxFQUMzQixHQUFLLFdBQVUsQ0FDYjtFQUNoQjtFQUNBLE9BQVk7RUFDWixHQUFHLENBQUM7QUFDSjtBQUNBO0VBQ0EsTUFBTSxXQUFXLEdBQUcsUUFBUSxDQUFDLGNBQWMsQ0FBQyxNQUFNLEVBQUM7RUFDbkQsUUFBUSxDQUFDLE1BQU0sQ0FBQyxxQkFBQyxTQUFHLEVBQUcsRUFBRSxXQUFXLENBQUM7Ozs7In0=
